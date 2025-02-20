@@ -1,0 +1,32 @@
+*** Settings ***
+Resource    ../pages/forgotloginname_page.robot
+Library    ../EnvLoader.py
+Library    String
+
+Test Setup    Open forgot loginname page
+Test Teardown    Close Browser
+
+*** Test Cases ***
+Validate last name and email are empty
+    [Tags]    FORGOTLOGINNAME    REGRESSION    AUTHENTICATION
+    Fill last name in forgot loginname page    ${EMPTY}
+	Fill email in forgot loginname page    ${EMPTY}
+	Click continue button
+	Verify login name and email are empty
+
+Validate last name and email are not registered
+    [Tags]    FORGOTLOGINNAME    REGRESSION    AUTHENTICATION
+    ${STRING_VALUE}    Generate Random String
+    Fill last name in forgot loginname page    ${STRING_VALUE}
+	Fill email in forgot loginname page    ${STRING_VALUE}@com.com
+	Click continue button
+	Verify login name and email are not registered
+
+Validate last name and email are valid
+    [Tags]    FORGOTLOGINNAME    REGRESSION    AUTHENTICATION
+    ${LASTNAME_VALUE}    Get Env    LASTNAME_VALUE 
+    ${EMAIL_VALUE}    Get Env    EMAIL_VALUE 
+    Fill last name in forgot loginname page    ${LASTNAME_VALUE}
+	Fill email in forgot loginname page    ${EMAIL_VALUE}
+	Click continue button
+	Verify success request forgot loginname
