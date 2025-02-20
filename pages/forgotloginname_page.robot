@@ -18,7 +18,6 @@ Open forgot loginname page
     Open Browser  ${STORE_BASE_URL}${LOGIN_URL}    ${BROWSER}
     Wait Until Location Is    ${STORE_BASE_URL}${LOGIN_URL}    2s
 	Click forgot loginname button
-    Maximize Browser Window
 
 Click forgot loginname button
     Wait Until Element Is Visible    ${FORGOTLOGINNAME_BUTTON}
