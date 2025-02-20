@@ -44,6 +44,7 @@ Open Signup Page
     Open Browser  ${STORE_BASE_URL}${LOGIN_URL}    ${BROWSER}
     Wait Until Location Is    ${STORE_BASE_URL}${LOGIN_URL}    2s
     Click register button
+    Maximize Browser Window
 
 Click register button
     Wait Until Element Is Visible    ${REGISTER_BUTTON}

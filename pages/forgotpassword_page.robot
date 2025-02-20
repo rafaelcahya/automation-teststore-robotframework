@@ -18,6 +18,7 @@ Open forgot password page
     Open Browser  ${STORE_BASE_URL}${LOGIN_URL}    ${BROWSER}
     Wait Until Location Is    ${STORE_BASE_URL}${LOGIN_URL}    2s
 	Click forgot password button
+    Maximize Browser Window
 
 Click forgot password button
     Wait Until Element Is Visible    ${FORGOTPASSWORD_BUTTON}

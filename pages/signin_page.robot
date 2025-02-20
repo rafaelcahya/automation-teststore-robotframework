@@ -15,6 +15,7 @@ Open signin page
     ${LOGIN_URL}    Get Env    LOGIN_URL
     Open Browser  ${STORE_BASE_URL}${LOGIN_URL}    ${BROWSER}
     Wait Until Location Is    ${STORE_BASE_URL}${LOGIN_URL}    2s
+    Maximize Browser Window
 
 Fill login name field in login page
     [Arguments]    ${EMAIL_VALUE}
