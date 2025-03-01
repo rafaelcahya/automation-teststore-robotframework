@@ -9,7 +9,7 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Verify add new address
-    [Tags]    ADDRESS    REGRESSION
+    [Tags]    address    regression
     ${STRING_VALUE}    Generate Random String
 	${NUMBER_VALUE}    Generate Random Number
     Click address button

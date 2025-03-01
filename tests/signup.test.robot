@@ -9,7 +9,7 @@ Library    String
 
 *** Test Cases ***
 Validate successfully Signup with valid data
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     ${STRING_VALUE}    Generate Random String
 	${NUMBER_VALUE}    Generate Random Number
 
@@ -34,55 +34,55 @@ Validate successfully Signup with valid data
 	Verify signup confirmation message
 
 Validate empty first name
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     Fill firstname field    ${EMPTY}
 	Click continue button
 	Verify message for empty first name
 
 Validate empty last name
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     Fill lastname field    ${EMPTY}
 	Click continue button
 	Verify message for empty last name
 
 Validate empty email
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     Fill email field    ${EMPTY}
 	Click continue button
 	Verify message for empty email
 
 Validate empty first address
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     Fill first address field    ${EMPTY}
 	Click continue button
 	Verify message for empty first address
 
 Validate empty city
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     Fill city field    ${EMPTY}
 	Click continue button
 	Verify message for empty city
 
 Validate empty zip code
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     Fill zipcode field    ${EMPTY}
 	Click continue button
 	Verify message for empty zip code
 
 Validate empty login name
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     Fill login name field    ${EMPTY}
 	Click continue button
 	Verify message for empty login name
 
 Validate empty password
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     Fill password field    ${EMPTY}
 	Click continue button
 	Verify message for empty password
 
 Validate password is not same with confirm password
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     ${STRING_VALUE}    Generate Random String
 	${NUMBER_VALUE}    Generate Random Number
 
@@ -107,7 +107,7 @@ Validate password is not same with confirm password
 	Verify password is not same with confirm password
 
 Validate signup with registered email
-    [Tags]    SIGNUP    REGRESSION    AUTHENTICATION
+    [Tags]    signup    regression    authentication
     ${STRING_VALUE}    Generate Random String
 	${NUMBER_VALUE}    Generate Random Number
 	${EMAIL_VALUE}    Get Env    EMAIL_VALUE

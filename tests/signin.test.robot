@@ -9,7 +9,7 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Validate login with valid account
-    [Tags]    SIGNIN    REGRESSION    AUTHENTICATION
+    [Tags]    signin    regression    authentication
     ${LOGINNAME}    Get Env    LOGINNAME_VALUE
     ${PASSWORD}    Get Env    PASSWORD_VALUE
 
@@ -19,14 +19,14 @@ Validate login with valid account
 	Verify login with valid account
 
 Validate login with login name and password are empty
-    [Tags]    SIGNIN    REGRESSION    AUTHENTICATION
+    [Tags]    signin    regression    authentication
     Fill login name field    ${EMPTY}
 	Fill password field    ${EMPTY}
 	Click login button
 	Verify login with invalid account
 
 Validate login with invalid account
-    [Tags]    SIGNIN    REGRESSION    AUTHENTICATION
+    [Tags]    signin    regression    authentication
     ${LOGINNAME}    Get Env    LOGINNAME_VALUE
     ${STRING_VALUE}    Generate Random String
 
