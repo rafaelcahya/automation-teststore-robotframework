@@ -22,9 +22,8 @@ Validate successfully Signup with valid data
 	Fill first address field    ${STRING_VALUE}
 	Fill second address field    ${STRING_VALUE}
 	Fill city field    ${STRING_VALUE}
-	Select country
-	Fill zipcode field    ${NUMBER_VALUE}
 	Select zone
+	Fill zipcode field    ${NUMBER_VALUE}
 	Fill login name field    ${STRING_VALUE}
 	Fill password field    ${STRING_VALUE}
 	Fill confirm password field    ${STRING_VALUE}
