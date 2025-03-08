@@ -7,6 +7,30 @@ Test Setup    Open forgot password page
 Test Teardown    Close Browser
 
 *** Test Cases ***
+Validate login name is empty
+    [Tags]    forgotpassword    regression    authentication
+    ${STRING_VALUE}    Generate Random String
+    Fill login name in forgot password page    ${EMPTY}
+	Fill email in forgot password page    ${STRING_VALUE}@com.com
+	Click continue button
+	Verify login name is empty
+	
+Validate email is empty
+    [Tags]    forgotpassword    regression    authentication
+    ${STRING_VALUE}    Generate Random String
+    Fill login name in forgot password page    ${STRING_VALUE}
+	Fill email in forgot password page    ${EMPTY}
+	Click continue button
+	Verify email is empty
+	
+Validate email is in invalid format
+    [Tags]    forgotpassword    regression    authentication
+    ${STRING_VALUE}    Generate Random String
+    Fill login name in forgot password page    ${STRING_VALUE}
+	Fill email in forgot password page    ${STRING_VALUE}
+	Click continue button
+	Verify email is in invalid format
+
 Validate login name and email are empty
     [Tags]    forgotpassword    regression    authentication
     Fill login name in forgot password page    ${EMPTY}

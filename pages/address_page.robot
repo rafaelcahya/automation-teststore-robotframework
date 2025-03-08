@@ -70,6 +70,30 @@ Click continue button in address page
     Wait Until Element Is Visible    ${CONTINUE_BUTTON}    2s
 	Click Element    ${CONTINUE_BUTTON}
 
+Verify character limit for first name
+    Element Should Be Visible    ${MAXCHAR_FIRSTNAME_MESSAGE}
+    Element Should Contain    ${MAXCHAR_FIRSTNAME_MESSAGE}    First Name must be between 1 and 32 characters!
+
+Verify character limit for last name
+    Element Should Be Visible    ${MAXCHAR_LASTTNAME_MESSAGE}
+    Element Should Contain    ${MAXCHAR_LASTTNAME_MESSAGE}    Last Name must be between 1 and 32 characters!
+
+Verify character limit for first address
+    Element Should Be Visible    ${MAXCHAR_FIRSTADDRESS_MESSAGE}
+    Element Should Contain    ${MAXCHAR_FIRSTADDRESS_MESSAGE}    Address must be between 3 and 128 characters!
+
+Verify character limit for city
+    Element Should Be Visible    ${MAXCHAR_CITY_MESSAGE}
+    Element Should Contain    ${MAXCHAR_CITY_MESSAGE}    City must be between 3 and 128 characters!
+
+Verify region is empty
+    Element Should Be Visible    ${EMPTY_REGION_MESSAGE}
+    Element Should Contain    ${EMPTY_REGION_MESSAGE}    Please select a region / state!
+
+Verify character limit for zip code
+    Element Should Be Visible    ${MAXCHAR_ZIPCODE_MESSAGE}
+    Element Should Contain    ${MAXCHAR_ZIPCODE_MESSAGE}    Zip/postal code must be between 2 and 10 characters!
+
 Verify success add address
     Wait Until Element Is Visible    ${ALERTSUCCESS}    2s
     Element Should Contain    ${ALERTSUCCESS}    Your address has been successfully inserted

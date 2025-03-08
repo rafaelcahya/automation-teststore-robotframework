@@ -27,6 +27,7 @@ ${MAXCHAR_LASTNAME_MESSAGE}    xpath=//span[contains(text(), 'Last Name must be 
 ${INVALID_EMAIL_MESSAGE}    xpath=//span[contains(text(), 'Email Address does not appear to be valid!')]
 ${MAXCHAR_FIRSTADDRESS_MESSAGE}    xpath=//span[contains(text(), 'Address 1 must be between 3 and 128 characters!')]
 ${MAXCHAR_CITY_MESSAGE}    xpath=//span[contains(text(), 'City must be between 3 and 128 characters!')]
+${EMPTY_REGION_MESSAGE}    xpath=//span[contains(text(), 'Please select a region / state!')]
 ${MAXCHAR_ZIPCODE_MESSAGE}    xpath=//span[contains(text(), 'Zip/postal code must be between 3 and 10 characters!')]
 ${MAXCHAR_LOGINNAME_MESSAGE}    xpath=//span[contains(text(), 'Login name must be alphanumeric only and between 5 and 64 characters!')]
 ${CHAR_PASSWORD_MESSAGE}    xpath=//span[contains(text(), 'Password must be between 4 and 20 characters!')]

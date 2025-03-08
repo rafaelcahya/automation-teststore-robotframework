@@ -30,6 +30,18 @@ Click continue button
     Wait Until Element Is Visible    ${CONTINUE_BUTTON}
 	Click Button    ${CONTINUE_BUTTON}
 
+Verify login name is empty
+    Element Should Be Visible    ${ALERTBOX}
+    Element Should Contain    ${ALERTBOX}    The Login name was not provided or not found in our records, please try again!
+
+Verify email is empty
+    Element Should Be Visible    ${ALERTBOX}
+    Element Should Contain    ${ALERTBOX}    The Email address was not provided or not found in our records, please try again!
+
+Verify email is in invalid format
+    Element Should Be Visible    ${ALERTBOX}
+    Element Should Contain    ${ALERTBOX}    No records found matching information your provided, please check your information and try again!
+
 Verify login name and email are empty
     Element Should Be Visible    ${ALERTBOX}
     Element Should Contain    ${ALERTBOX}    The Email address was not provided or not found in our records, please try again!

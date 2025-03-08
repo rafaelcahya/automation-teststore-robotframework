@@ -14,3 +14,11 @@ ${COUNTRY_FIELD}    id:AddressFrm_country_id
 ${DEFAULTADDRESS_BUTTON}    id:AddressFrm_default0
 ${CONTINUE_BUTTON}    xpath=//button[@title='Continue']
 ${ALERTSUCCESS}    xpath=//div[contains(@class, 'alert-success')]
+${ALERTBOX}    xpath=//div[contains(@class, 'alert-error')]
+
+${MAXCHAR_FIRSTNAME_MESSAGE}    xpath=//span[contains(text(), 'First Name must be between 1 and 32 characters!')]
+${MAXCHAR_LASTTNAME_MESSAGE}    xpath=//span[contains(text(), 'Last Name must be between 1 and 32 characters!')]
+${MAXCHAR_FIRSTADDRESS_MESSAGE}    xpath=//span[contains(text(), 'Address must be between 3 and 128 characters!')]
+${MAXCHAR_CITY_MESSAGE}    xpath=//span[contains(text(), 'City must be between 3 and 128 characters!')]
+${EMPTY_REGION_MESSAGE}    xpath=//span[contains(text(), 'Please select a region / state!')]
+${MAXCHAR_ZIPCODE_MESSAGE}    xpath=//span[contains(text(), 'Zip/postal code must be between 2 and 10 characters!')]

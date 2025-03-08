@@ -112,11 +112,11 @@ Verify signup confirmation message
     Wait Until Element Is Visible    ${SIGNUP_CONFIRMATION_MESSAGE}
     Element Should Contain    ${SIGNUP_CONFIRMATION_MESSAGE}     YOUR ACCOUNT HAS BEEN CREATED!
 
-Verify message for empty first name 
+Verify message for character limit in first name 
     Element Should Be Visible    ${MAXCHAR_FIRSTNAME_MESSAGE}
     Element Should Contain    ${MAXCHAR_FIRSTNAME_MESSAGE}    First Name must be between 1 and 32 characters!
 
-Verify message for empty last name 
+Verify message for character limit in last name  
     Element Should Be Visible    ${MAXCHAR_LASTNAME_MESSAGE}
     Element Should Contain    ${MAXCHAR_LASTNAME_MESSAGE}    Last Name must be between 1 and 32 characters!
 
@@ -124,13 +124,21 @@ Verify message for empty email
     Element Should Be Visible    ${INVALID_EMAIL_MESSAGE}
     Element Should Contain    ${INVALID_EMAIL_MESSAGE}    Email Address does not appear to be valid!
 
-Verify message for empty first address
+Verify message for invalid email format
+    Element Should Be Visible    ${INVALID_EMAIL_MESSAGE}
+    Element Should Contain    ${INVALID_EMAIL_MESSAGE}    Email Address does not appear to be valid!
+
+Verify message for character limit in first address
     Element Should Be Visible    ${MAXCHAR_FIRSTADDRESS_MESSAGE}
     Element Should Contain    ${MAXCHAR_FIRSTADDRESS_MESSAGE}    Address 1 must be between 3 and 128 characters!
 
-Verify message for empty city
+Verify message for character limit in city
     Element Should Be Visible    ${MAXCHAR_CITY_MESSAGE}
     Element Should Contain    ${MAXCHAR_CITY_MESSAGE}    City must be between 3 and 128 characters!
+
+Verify message for empty region
+    Element Should Be Visible    ${EMPTY_REGION_MESSAGE}
+    Element Should Contain    ${EMPTY_REGION_MESSAGE}    Please select a region / state!
 
 Verify message for empty zip code
     Element Should Be Visible    ${MAXCHAR_ZIPCODE_MESSAGE}
@@ -140,13 +148,21 @@ Verify message for empty login name
     Element Should Be Visible    ${MAXCHAR_LOGINNAME_MESSAGE}
     Element Should Contain    ${MAXCHAR_LOGINNAME_MESSAGE}    Login name must be alphanumeric only and between 5 and 64 characters!
 
-Verify message for empty password
+Verify message for duplicate login name
+    Element Should Be Visible    ${ALERTBOX}
+    Element Should Contain    ${ALERTBOX}    This login name is not available. Try different login name!
+
+Verify message for character limit in password
     Element Should Be Visible    ${CHAR_PASSWORD_MESSAGE}
     Element Should Contain    ${CHAR_PASSWORD_MESSAGE}    Password must be between 4 and 20 characters!
 
 Verify password is not same with confirm password 
     Element Should Be Visible    ${MATCH_PASSWORD_MESSAGE}
     Element Should Contain    ${MATCH_PASSWORD_MESSAGE}    Password confirmation does not match password!
+
+Verify message for privacy policy is not selected
+    Element Should Be Visible    ${ALERTBOX}
+    Element Should Contain    ${ALERTBOX}    You must agree to the Privacy Policy!
 
 Verify signup with registered email 
     Element Should Be Visible    ${ALERTBOX}
